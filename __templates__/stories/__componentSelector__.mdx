@@ -1,0 +1,22 @@
+import { Meta, Story, Canvas } from "@storybook/blocks";
+
+import { Markdown } from "@storybook/addon-docs";
+
+import * as {{ componentClass }}Stories from './{{ componentSelector }}.stories';
+
+import Readme from "../../../packages/{{ directory }}/{{ componentSelector }}/README.md";
+import Changelog from "../../../packages/{{ directory }}/{{ componentSelector }}/CHANGELOG.md";
+
+<Meta title="MDX/Checkbox" of={ {{ componentClass }}Stories } />
+
+# {{ componentSelector }}
+
+<Markdown>{Readme}</Markdown>
+
+# Changelog
+
+<Markdown>{Changelog}</Markdown>
+
+<Canvas>
+  <Story of={ {{ componentClass }}Stories.Regular } />
+</Canvas>

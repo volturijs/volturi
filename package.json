@@ -1,0 +1,54 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/**/*"
+  ],
+  "scripts": {
+    "component:create": "ts-node scripts/component/new-component.ts",
+    "css": "ts-node scripts/utils/create-css-md.ts",
+    "build": "lerna run build",
+    "storybook": "npm run build && storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "local-publish": "lerna publish --no-push --registry=\"http://localhost:4873/\""
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.22.5",
+    "@babel/preset-typescript": "^7.22.5",
+    "@storybook/addon-essentials": "^7.0.20",
+    "@storybook/addon-links": "^7.0.20",
+    "@storybook/blocks": "^7.0.20",
+    "@storybook/web-components": "^7.0.20",
+    "@storybook/web-components-webpack5": "^7.0.20",
+    "@types/inquirer": "^7.3.3",
+    "handlebars": "^4.7.7",
+    "inquirer": "^7.3.3",
+    "lerna": "^7.0.1",
+    "lit": "^2.7.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.0.20",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && npm run analyze",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "husky": "^8.0.3"
+  }
+}
