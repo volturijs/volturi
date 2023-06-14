@@ -10,7 +10,7 @@
     "build": "lerna run build",
     "storybook": "npm run build && storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "local-publish": "lerna publish --no-push --registry=\"http://localhost:4873/\""
+    "local-publish": "lerna publish --registry=\"http://localhost:4873/\""
   },
   "devDependencies": {
     "@babel/preset-env": "^7.22.5",
