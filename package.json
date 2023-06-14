@@ -6,11 +6,11 @@
   ],
   "scripts": {
     "component:create": "ts-node scripts/component/new-component.ts",
-    "css": "ts-node scripts/utils/create-css-md.ts",
     "build": "lerna run build",
+    "build:css": "ts-node scripts/utils/create-css-md.ts",
     "storybook": "npm run build && storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "local-publish": "lerna publish from-package --registry=\"http://localhost:4873/\""
+    "build-storybook": "npm run build && storybook build",
+    "local-publish": "lerna publish from-package --yes --registry=\"http://localhost:4873/\""
   },
   "devDependencies": {
     "@babel/preset-env": "^7.22.5",

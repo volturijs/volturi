@@ -1,0 +1,1 @@
+{"version":3,"file":"forms-oscd-checkbox-oscd-checkbox-mdx.85a0e0e6.iframe.bundle.js","mappings":";;AAEA","sources":["webpack://root/../src/OscdCheckbox.ts"],"sourcesContent":["import { OscdCheckbox } from './oscd-checkbox.js';\n\nwindow.customElements.define('oscd-checkbox', OscdCheckbox);\nexport { OscdCheckbox };\n"],"names":[],"sourceRoot":""}
