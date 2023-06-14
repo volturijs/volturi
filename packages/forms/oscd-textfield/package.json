@@ -3,7 +3,7 @@
   "description": "Webcomponent oscd-textfield following open-wc recommendations",
   "license": "Apache-2.0",
   "author": "OpenSCD",
-  "version": "0.0.2-alpha.0",
+  "version": "0.0.0",
   "browser": "./dist/OscdTextfield.js",
   "module": "./dist/OscdTextfield.js",
   "files": [
@@ -64,5 +64,6 @@
   "prettier": {
     "singleQuote": true,
     "arrowParens": "avoid"
-  }
+  },
+  "gitHead": "b16a3003a7142711d017de2ab1bf44e7d930ec82"
 }
